@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main(int argc, char const *argv[])
+{
+    int nota[50];
+    int soma=0;
+    float media;
+    int aprova=0;
+
+    for(int i=0; i<50; i++)
+    {       
+        printf("Digite a nota do aluno %d: \n", i+1);
+        scanf("%d", &nota[i]);
+        soma += nota[i];
+    }
+
+    media = soma / 50;
+    printf("Media da turma: %.2f \n", media);
+
+    for(int i=0; i<50; i++)
+    {
+        if(nota[i] > media){
+            aprovad++;
+        }
+    }
+
+    printf("Notas acima da media: \n", aprovad);
+    
+    return 0;
+}
