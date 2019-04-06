@@ -1,0 +1,57 @@
+//Exercicio 5.1
+
+#include <stdio.h>
+
+int main (void) {
+
+int *p;
+int a, b;
+
+    printf("\nValor para A:\n" );
+    scanf("%d", &a);
+    printf("\nValor para B:\n");
+    scanf("%d", &b);
+
+if (a>b) {
+    *p=a;
+    printf("\nMaior eh A:%d\n", a);
+    a=(*p-50);
+    printf("\n50 subtraido de A:%d\n", a);
+    } 
+else {
+        *p=b;
+        printf("\nMaior valor eh B:%d\n", b);
+        b=(*p-50);
+        printf("\n50 subtraido de B:%d\n", b);
+
+    }
+printf("Valor de A e B respectivamente:%d %d\n", a, b);
+    return 0;
+}
+
+//Exercício 5.2
+
+#include <stdio.h>
+
+
+void compra (int* conta, int valor) {
+    *conta = *conta-valor;
+
+}
+
+int main(void) {
+
+    int m=1000, h=800;
+    int* p;
+    if (m>h) {
+        p=&m;
+
+    } else {
+        p=&h;
+    }
+    compra(p, 30);
+    printf("Valores das contas após a compra: \nH: %d \nM: %d\n", m, h); 
+
+
+return 0;
+}
